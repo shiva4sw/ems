@@ -1,0 +1,24 @@
+<!-- student_dashboad.html  -->
+<html>
+    <body>
+        <div>
+            <h1>Exams</h1>
+            {% for exam in exams %}
+                <a href="{% url 'stud_exam' exam.id %}">{{exam.exam}}</a>
+            {% endfor %}
+
+            <h1>Results</h1>
+            {% for res in results %}
+                <a href="{% url 'stud_res' res.id %}">{{res.exam}}</a>
+            {% endfor %}
+        </div>
+        <h1>{{msg}}</h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="sid" value="1"/>
+            <input type="text" name="unm" value="student1"/>
+            <input type="password" name="pwd" value="student1"/>
+            <input type="submit" value="GET Exams"/>
+        </form>
+    </body>
+</html>

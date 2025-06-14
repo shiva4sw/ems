@@ -1,0 +1,12 @@
+<html>
+    <body>
+        <div id="menu">
+            <a href="{% url 'faculty' %}">Faculty</a> | 
+            <a href="{% url 'student' %}">Student</a>
+        </div>
+        <div>
+            {% block content %}
+            {% endblock %}
+        </div>
+    </body>
+</html>

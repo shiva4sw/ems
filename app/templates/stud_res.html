@@ -1,0 +1,13 @@
+<html>
+    <body>
+        <div>
+            {% for ans in answerd %}
+                {{ans.que}}<br>
+                {{ans.ans}}<br>
+                {{ans.score}} <br><br>
+            {% endfor %}
+            <h2>Total Score : {{total}}</h2>
+        </div>
+        <a href="{% url 'sd' %}">Home</a>
+    </body>
+</html>

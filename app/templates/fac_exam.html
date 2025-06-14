@@ -1,0 +1,24 @@
+{% load static %}
+<html>
+    <head>
+        <script src="{% static 'app/js/main.js'%}"></script>
+    </head>
+    <body onload="getExams()">
+        <div id="menu">
+            <a href="{% url 'fac_dashboard' %}"> Home</a>
+        </div>
+        <div>
+            <div>
+                <input type="text" id="exam" placeholder="Title" /> <br/>
+                <input type="date" id="startdate" /> <br/>
+                <input type="date" id="enddate" /> <br/>
+                <input type="text" id="facid" value="{{fac.id}}" readonly />
+                <input type="text" id="facname" value="{{fac.name}}" readonly /> <br/>
+                <button onclick="saveExam()">Save</button>
+            </div>
+            <div id="idExams">
+
+            </div>
+        </div>
+    </body>
+</html>

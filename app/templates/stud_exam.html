@@ -1,0 +1,18 @@
+<html>
+    <body>
+        <div>
+            <form method="post">
+                {% csrf_token %}                
+            {% for que in ques %}
+            {{que.que}} : Max {{que.marks}} <br/>
+            <textarea name="{{que.id}}" 
+                cols="100" 
+                rows="10" 
+                placeholder="Your Answer"></textarea>
+            <hr/>
+            {% endfor %}
+            <input type="submit" value="submit" />
+            </form>
+        </div>
+    </body>
+</html>
